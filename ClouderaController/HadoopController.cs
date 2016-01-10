@@ -9,6 +9,7 @@ using System.IO;
 
 namespace Hadoop
 {
+	// hadoop class
     public class HadoopController
     {
 
