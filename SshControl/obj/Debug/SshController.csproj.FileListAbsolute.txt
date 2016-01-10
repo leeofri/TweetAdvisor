@@ -1,0 +1,10 @@
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\Tamir.SharpSSH.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\DiffieHellman.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\Org.Mentalis.Security.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\Tamir.SharpSSH.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\obj\Debug\SshController.csprojResolveAssemblyReference.cache
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\SSHWrapper.dll.config
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\SSHWrapper.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\SSHWrapper.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\obj\Debug\SSHWrapper.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\obj\Debug\SSHWrapper.pdb

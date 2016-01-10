@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSHWrapper", "SshControl\SSHWrapper.csproj", "{857DD4E6-A706-45CF-9056-7DE48B4B978D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSSH", "SharpSSH\SharpSSH.csproj", "{D27CF69D-4681-492A-BE4D-D3D209104423}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HadoopController", "ClouderaController\HadoopController.csproj", "{CEEB3E6B-0B8A-4BCF-9132-3D2D7086ABC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunProject", "RunProject\RunProject.csproj", "{ED3C8B9D-31BA-4495-AF04-1F1976BFC92E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{778D7340-2743-46F3-ACAA-5196393EDA39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BL", "BL", "{3531539F-DB2A-4192-A531-C89AE701BB3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockReader", "StockReader\StockReader.csproj", "{6EE3F9E7-8A86-4448-BDDF-8990D94EA7D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{CA6A10C9-05F9-42BC-9207-4D74B8CD1E9E}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\StockSymbols.txt = Resources\StockSymbols.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CsvFiles", "CsvFiles", "{3AF32F5D-C37A-4A8E-A306-435A393C5801}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{857DD4E6-A706-45CF-9056-7DE48B4B978D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{857DD4E6-A706-45CF-9056-7DE48B4B978D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{857DD4E6-A706-45CF-9056-7DE48B4B978D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{857DD4E6-A706-45CF-9056-7DE48B4B978D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D27CF69D-4681-492A-BE4D-D3D209104423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D27CF69D-4681-492A-BE4D-D3D209104423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D27CF69D-4681-492A-BE4D-D3D209104423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D27CF69D-4681-492A-BE4D-D3D209104423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEEB3E6B-0B8A-4BCF-9132-3D2D7086ABC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEEB3E6B-0B8A-4BCF-9132-3D2D7086ABC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEEB3E6B-0B8A-4BCF-9132-3D2D7086ABC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEEB3E6B-0B8A-4BCF-9132-3D2D7086ABC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED3C8B9D-31BA-4495-AF04-1F1976BFC92E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED3C8B9D-31BA-4495-AF04-1F1976BFC92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED3C8B9D-31BA-4495-AF04-1F1976BFC92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED3C8B9D-31BA-4495-AF04-1F1976BFC92E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE3F9E7-8A86-4448-BDDF-8990D94EA7D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE3F9E7-8A86-4448-BDDF-8990D94EA7D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE3F9E7-8A86-4448-BDDF-8990D94EA7D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE3F9E7-8A86-4448-BDDF-8990D94EA7D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{857DD4E6-A706-45CF-9056-7DE48B4B978D} = {3531539F-DB2A-4192-A531-C89AE701BB3A}
+		{D27CF69D-4681-492A-BE4D-D3D209104423} = {778D7340-2743-46F3-ACAA-5196393EDA39}
+		{CEEB3E6B-0B8A-4BCF-9132-3D2D7086ABC2} = {3531539F-DB2A-4192-A531-C89AE701BB3A}
+		{6EE3F9E7-8A86-4448-BDDF-8990D94EA7D9} = {3531539F-DB2A-4192-A531-C89AE701BB3A}
+		{3AF32F5D-C37A-4A8E-A306-435A393C5801} = {CA6A10C9-05F9-42BC-9207-4D74B8CD1E9E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+User : Baruch    Domain : www.amazon.com	2838
+User : Daniela   Domain : www.amazon.com	1336
+User : Itsik     Domain : www.google.com	8498
+User : Jojo      Domain : www.walla.co.il	1417
+User : Mirit     Domain : www.walla.co.il	1407
+User : Orian     Domain : www.walla.co.il	1410
+User : Shay      Domain : www.walla.co.il	1404
+User : Sigalit   Domain : www.amazon.com	743
+User : Sigalit   Domain : www.walla.co.il	666
+User : Tikva     Domain : www.amazon.com	4257
+User : Tikva     Domain : www.google.com	1024

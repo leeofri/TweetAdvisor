@@ -1,0 +1,12 @@
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\obj\Debug\ClouderaController.csprojResolveAssemblyReference.cache
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\bin\Debug\ClouderaController.exe.config
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\bin\Debug\ClouderaController.exe
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\bin\Debug\ClouderaController.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\bin\Debug\Tamir.SharpSSH.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\bin\Debug\DiffieHellman.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\bin\Debug\Org.Mentalis.Security.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\bin\Debug\SshControl.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\bin\Debug\Tamir.SharpSSH.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\obj\Debug\ClouderaController.exe
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\obj\Debug\ClouderaController.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\bin\Debug\SshControl.dll

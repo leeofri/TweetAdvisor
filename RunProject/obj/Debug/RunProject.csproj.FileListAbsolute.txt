@@ -1,0 +1,14 @@
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\bin\Debug\RunProject.exe.config
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\bin\Debug\RunProject.exe
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\bin\Debug\RunProject.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\obj\Debug\RunProject.exe
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\obj\Debug\RunProject.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\obj\Debug\RunProject.csprojResolveAssemblyReference.cache
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\bin\Debug\Hadoop.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\bin\Debug\SSHWrapper.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\bin\Debug\Tamir.SharpSSH.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\bin\Debug\DiffieHellman.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\bin\Debug\Org.Mentalis.Security.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\bin\Debug\Hadoop.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\bin\Debug\SSHWrapper.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\RunProject\bin\Debug\Tamir.SharpSSH.pdb

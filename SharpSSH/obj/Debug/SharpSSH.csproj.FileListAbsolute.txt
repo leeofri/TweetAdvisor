@@ -1,0 +1,7 @@
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\bin\Debug\Tamir.SharpSSH.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\bin\Debug\Tamir.SharpSSH.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SharpSSH\obj\Debug\Tamir.SharpSsh.jsch.examples.InputForm.resources
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SharpSSH\obj\Debug\SharpSSH.csproj.GenerateResource.Cache
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SharpSSH\obj\Debug\Tamir.SharpSSH.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SharpSSH\obj\Debug\Tamir.SharpSSH.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SharpSSH\obj\Debug\SharpSSH.csprojResolveAssemblyReference.cache

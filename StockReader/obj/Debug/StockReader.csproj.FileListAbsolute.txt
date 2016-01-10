@@ -1,0 +1,5 @@
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\StockReader\bin\Debug\StockReader.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\StockReader\obj\Debug\StockReader.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\StockReader\bin\Debug\StockReader.exe.config
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\StockReader\bin\Debug\StockReader.exe
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\StockReader\obj\Debug\StockReader.exe

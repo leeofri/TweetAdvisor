@@ -1,0 +1,10 @@
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\SshControl.exe.config
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\SshControl.exe
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\SshControl.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\Tamir.sharpSsh.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\DiffieHellman.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\Org.Mentalis.Security.dll
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\Tamir.sharpSsh.pdb
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\obj\Debug\SshControl.csprojResolveAssemblyReference.cache
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\obj\Debug\SshControl.exe
+C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\obj\Debug\SshControl.pdb
