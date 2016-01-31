@@ -13,9 +13,10 @@ namespace StockReader
         {
             var stock = new StockReader();
 
-           // stock.GetRandomStocksList(100);
+            stock.MakeInputStocksFile(100, 30);
 
-          
+
+
         }
     }
 }

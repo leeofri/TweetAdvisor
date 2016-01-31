@@ -32,20 +32,20 @@ namespace StockReader
             return result;
         }
 
-        public void MakeInputStocksFile()
+        public void MakeInputStocksFile(int numberOfStocks, int numberOfDays)
         {
             string csvPath = ConfigurationManager.AppSettings["csvPath"];
 
-          //  BuildingFinalString(DownloadStocksInfo(), );
+            var stocksInfo = DownloadStocksInfo(numberOfStocks, numberOfDays);
 
-            string[] asd = {};
+            string[] arrStringToWrite = { BuildingFinalString(stocksInfo)};
 
-            File.WriteAllLines("input", asd);
+            File.WriteAllLines("input", arrStringToWrite);
         }
 
-        public List<Stock> DownloadStocksInfo()
+        public List<Stock> DownloadStocksInfo(int numberOfStocks, int numberOfDays)
         {
-            var randomStockNames = GetRandomStocksList(10);
+            var randomStockNames = GetRandomStocksList(numberOfStocks);
 
             List<Stock> stocks = new List<Stock>();
 
@@ -61,7 +61,22 @@ namespace StockReader
 
                     try
                     {
-                        var stockTxt = client.DownloadString(baseUrl + currStockName);
+                        var fromDateMonth = DateTime.Now.AddDays(-numberOfDays).Month - 1;
+                        var fromDateDay = DateTime.Now.AddDays(-numberOfDays).Day;
+                        var fromDateYear = DateTime.Now.AddDays(-numberOfDays).Year;
+                        
+                        var ToDateMonth = DateTime.Now.Month - 1;
+                        var ToDateDay = DateTime.Now.Day;
+                        var ToDateYear = DateTime.Now.Year;
+
+                        string daysCohise = String.Format("&a={0}&b={1}&c={2}&d={3}&e={4}&f={5}", fromDateMonth,
+                                                                                                fromDateDay,
+                                                                                                fromDateYear, 
+                                                                                                ToDateMonth,
+                                                                                                ToDateDay,
+                                                                                                ToDateYear);
+
+                        var stockTxt = client.DownloadString(baseUrl + currStockName + daysCohise);
 
                         char[] delimiters = { '\n' };
 
@@ -101,25 +116,44 @@ namespace StockReader
         {
             StringBuilder resultString = new StringBuilder();
 
+            var businessdays = CalcBusinessDays(stocks);
+
             foreach (var currStock in stocks)
             {
-                resultString.Append(currStock.Name);
-
-                resultString.Append("|");
-
-                foreach (var currDay in currStock.Days)
+                if (currStock.Days.Count == businessdays)
                 {
-                    resultString.Append(currDay.Open + " ");
-                    resultString.Append(currDay.Close + " ");
-                    resultString.Append(currDay.High + " ");
-                    resultString.Append(currDay.Low);
-                    resultString.Append("|");
-                }
+                    resultString.Append(currStock.Name);
 
-                resultString.Append("\n");
+                    resultString.Append("|");
+
+                    foreach (var currDay in currStock.Days)
+                    {
+                        resultString.Append(currDay.Open + " ");
+                        resultString.Append(currDay.Close + " ");
+                        resultString.Append(currDay.High + " ");
+                        resultString.Append(currDay.Low);
+                        resultString.Append("|");
+                    }
+
+                    resultString.Append("\n");
+                }
             }
 
             return resultString.ToString();
+        }
+
+        private static int CalcBusinessDays(List<Stock> stocks)
+        {
+            int businessDays = 0;
+
+            foreach (var stock in stocks)
+            {
+                if (businessDays < stock.Days.Count)
+                {
+                    businessDays = stock.Days.Count;
+                }
+            }
+            return businessDays;
         }
     }
 }

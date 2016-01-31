@@ -10,3 +10,15 @@ C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\bin\Deb
 C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\bin\Debug\Tamir.SharpSSH.pdb
 C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\obj\Debug\Hadoop.dll
 C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\ClouderaController\obj\Debug\Hadoop.pdb
+C:\matan\Projects\StockAnalyzer\ClouderaController\bin\Debug\Hadoop.dll.config
+C:\matan\Projects\StockAnalyzer\ClouderaController\bin\Debug\Hadoop.dll
+C:\matan\Projects\StockAnalyzer\ClouderaController\bin\Debug\Hadoop.pdb
+C:\matan\Projects\StockAnalyzer\ClouderaController\bin\Debug\SSHWrapper.dll
+C:\matan\Projects\StockAnalyzer\ClouderaController\bin\Debug\Tamir.SharpSSH.dll
+C:\matan\Projects\StockAnalyzer\ClouderaController\bin\Debug\DiffieHellman.dll
+C:\matan\Projects\StockAnalyzer\ClouderaController\bin\Debug\Org.Mentalis.Security.dll
+C:\matan\Projects\StockAnalyzer\ClouderaController\bin\Debug\SSHWrapper.pdb
+C:\matan\Projects\StockAnalyzer\ClouderaController\bin\Debug\Tamir.SharpSSH.pdb
+C:\matan\Projects\StockAnalyzer\ClouderaController\obj\Debug\HadoopController.csprojResolveAssemblyReference.cache
+C:\matan\Projects\StockAnalyzer\ClouderaController\obj\Debug\Hadoop.dll
+C:\matan\Projects\StockAnalyzer\ClouderaController\obj\Debug\Hadoop.pdb
