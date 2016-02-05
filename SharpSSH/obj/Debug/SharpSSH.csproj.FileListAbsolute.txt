@@ -5,3 +5,10 @@ C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SharpSSH\obj\Debug\SharpSS
 C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SharpSSH\obj\Debug\Tamir.SharpSSH.dll
 C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SharpSSH\obj\Debug\Tamir.SharpSSH.pdb
 C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SharpSSH\obj\Debug\SharpSSH.csprojResolveAssemblyReference.cache
+C:\matan\Projects\StockAnalyzer\bin\Debug\Tamir.SharpSSH.dll
+C:\matan\Projects\StockAnalyzer\bin\Debug\Tamir.SharpSSH.pdb
+C:\matan\Projects\StockAnalyzer\SharpSSH\obj\Debug\SharpSSH.csprojResolveAssemblyReference.cache
+C:\matan\Projects\StockAnalyzer\SharpSSH\obj\Debug\Tamir.SharpSsh.jsch.examples.InputForm.resources
+C:\matan\Projects\StockAnalyzer\SharpSSH\obj\Debug\SharpSSH.csproj.GenerateResource.Cache
+C:\matan\Projects\StockAnalyzer\SharpSSH\obj\Debug\Tamir.SharpSSH.dll
+C:\matan\Projects\StockAnalyzer\SharpSSH\obj\Debug\Tamir.SharpSSH.pdb

@@ -9,7 +9,7 @@ namespace StockReader
     public class Stock
     {
         public string Name { get; set; }
-        public List<StockDayInfo>  Days { get; set; }
+        public List<StockDayInfo> Days { get; set; }
 
         public Stock()
         {

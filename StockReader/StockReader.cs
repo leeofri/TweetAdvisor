@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -10,11 +11,14 @@ using System.Threading.Tasks;
 
 namespace StockReader
 {
-    public class StockReader
+   
+    public class StockManager
     {
+        private static string CSV_PATH = @"C:\matan\Projects\StockAnalyzer\Resources\StockSymbols.txt";
+     
         public List<string> GetRandomStocksList(int numberOfStocks)
         {
-            var allLines = File.ReadAllLines("../../../Resources/StockSymbols.txt");
+            var allLines = File.ReadAllLines(CSV_PATH);
             char[] delimiters = { '|' };
             var allSymbols = allLines.ToList().Select(x => x.Split(delimiters)).Select(x => x[0]);
             allSymbols.First();
@@ -32,15 +36,15 @@ namespace StockReader
             return result;
         }
 
-        public void MakeInputStocksFile(int numberOfStocks, int numberOfDays)
+        public List<Stock> MakeInputStocksFile(int numberOfStocks, int numberOfDays)
         {
-            string csvPath = ConfigurationManager.AppSettings["csvPath"];
-
             var stocksInfo = DownloadStocksInfo(numberOfStocks, numberOfDays);
 
-            string[] arrStringToWrite = { BuildingFinalString(stocksInfo)};
+            string[] arrStringToWrite = { BuildingFinalString(stocksInfo) };
 
-            File.WriteAllLines("input", arrStringToWrite);
+            File.WriteAllLines(@"C:\matan\Projects\StockAnalyzer\StockReader\bin\Debug\input", arrStringToWrite);
+
+            return stocksInfo;
         }
 
         public List<Stock> DownloadStocksInfo(int numberOfStocks, int numberOfDays)
@@ -64,14 +68,14 @@ namespace StockReader
                         var fromDateMonth = DateTime.Now.AddDays(-numberOfDays).Month - 1;
                         var fromDateDay = DateTime.Now.AddDays(-numberOfDays).Day;
                         var fromDateYear = DateTime.Now.AddDays(-numberOfDays).Year;
-                        
+
                         var ToDateMonth = DateTime.Now.Month - 1;
                         var ToDateDay = DateTime.Now.Day;
                         var ToDateYear = DateTime.Now.Year;
 
                         string daysCohise = String.Format("&a={0}&b={1}&c={2}&d={3}&e={4}&f={5}", fromDateMonth,
                                                                                                 fromDateDay,
-                                                                                                fromDateYear, 
+                                                                                                fromDateYear,
                                                                                                 ToDateMonth,
                                                                                                 ToDateDay,
                                                                                                 ToDateYear);
@@ -120,13 +124,19 @@ namespace StockReader
 
             foreach (var currStock in stocks)
             {
+
+
+                // Cheking that the buinessdays are the same as all
                 if (currStock.Days.Count == businessdays)
                 {
+                    // Normilize the data
+                    var normelizedStock = NormalizeStock(currStock);
+
                     resultString.Append(currStock.Name);
 
                     resultString.Append("|");
 
-                    foreach (var currDay in currStock.Days)
+                    foreach (var currDay in normelizedStock.Days)
                     {
                         resultString.Append(currDay.Open + " ");
                         resultString.Append(currDay.Close + " ");
@@ -154,6 +164,42 @@ namespace StockReader
                 }
             }
             return businessDays;
+        }
+
+
+        private static Stock NormalizeStock(Stock stock)
+        {
+            Stock normelizedStock = new Stock { Name = stock.Name };
+
+            foreach (var day in stock.Days)
+            {
+                StockDayInfo normelizedDay = new StockDayInfo();
+
+                normelizedDay.Open = NormelizeFeature(day.Open, stock.Days.Select(x => x.Open));
+                normelizedDay.Close = NormelizeFeature(day.Close, stock.Days.Select(x => x.Close));
+                normelizedDay.High = NormelizeFeature(day.High, stock.Days.Select(x => x.High));
+                normelizedDay.Low = NormelizeFeature(day.Low, stock.Days.Select(x => x.Low));
+
+                normelizedStock.Days.Add(normelizedDay);
+            }
+
+            return normelizedStock;
+        }
+
+        private static double NormelizeFeature(double value, IEnumerable<double> featureValues)
+        {
+            var dataMax = featureValues.Max();
+            double dataMin = featureValues.Min();
+            double range = dataMax - dataMin;
+
+            if (range != 0)
+            {
+                return ((value - dataMin) / range);
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }

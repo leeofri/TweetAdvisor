@@ -8,3 +8,13 @@ C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\SSHWr
 C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\bin\Debug\SSHWrapper.pdb
 C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\obj\Debug\SSHWrapper.dll
 C:\Users\Matan\Desktop\BigDataCourse\Task1\SshControl\SshControl\obj\Debug\SSHWrapper.pdb
+C:\matan\Projects\StockAnalyzer\SshControl\bin\Debug\SSHWrapper.dll.config
+C:\matan\Projects\StockAnalyzer\SshControl\bin\Debug\SSHWrapper.dll
+C:\matan\Projects\StockAnalyzer\SshControl\bin\Debug\SSHWrapper.pdb
+C:\matan\Projects\StockAnalyzer\SshControl\bin\Debug\Tamir.SharpSSH.dll
+C:\matan\Projects\StockAnalyzer\SshControl\bin\Debug\DiffieHellman.dll
+C:\matan\Projects\StockAnalyzer\SshControl\bin\Debug\Org.Mentalis.Security.dll
+C:\matan\Projects\StockAnalyzer\SshControl\bin\Debug\Tamir.SharpSSH.pdb
+C:\matan\Projects\StockAnalyzer\SshControl\obj\Debug\SSHWrapper.csprojResolveAssemblyReference.cache
+C:\matan\Projects\StockAnalyzer\SshControl\obj\Debug\SSHWrapper.dll
+C:\matan\Projects\StockAnalyzer\SshControl\obj\Debug\SSHWrapper.pdb
