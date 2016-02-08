@@ -11,10 +11,10 @@ namespace StockAnalyzer.Site.Controllers
     public class StockController : ApiController
     {
         // GET api/values
-        public object Get()
+        public object Get(int numberOfDays, int numberOfStocks)
         {
             StockReader.StockManager asd = new StockReader.StockManager();
-            var stocks = asd.MakeInputStocksFile(10, 30);
+            var stocks = asd.MakeInputStocksFile(numberOfStocks, numberOfDays);
 
             return stocks;
 

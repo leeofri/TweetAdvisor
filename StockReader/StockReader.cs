@@ -98,7 +98,7 @@ namespace StockReader
                             day.Open = Convert.ToDouble(currRow[1]);
                             day.High = Convert.ToDouble(currRow[2]);
                             day.Low = Convert.ToDouble(currRow[3]);
-                            day.Low = Convert.ToDouble(currRow[4]);
+                            day.Close = Convert.ToDouble(currRow[4]);
 
                             stock.Days.Add(day);
                         }

@@ -4,6 +4,16 @@
     <title></title>
     <meta charset="utf-8" />
     <link href="Content/bootstrap.css" rel="stylesheet">
+
+
+    <style>
+        /*For twitter bootsprap*/
+        .jqstooltip {
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -16,14 +26,45 @@
     </div>
 
     <!-- User Options -->
+    <div class="container" id="userOptionsWrapper" >
+        <div class="row">
+            <div class="col-lg-6">
+                <div>
+                    <div class="form-group">
+                        <label for="numberOfStocks">Number of stocks</label>
+                        <input type="number" value="10" class="form-control" id="numberOfStocks" placeholder="Number of stocks">
+                    </div>
+                    <div class="form-group">
+                        <label for="numberOfDays">Days</label>
+                        <input type="number" value="30" class="form-control" id="numberOfDays" placeholder="Number of days">
+                    </div>
+
+                    <div class="form-group">
+                        <span>features for analysis :</span>
+                        <label><input type="checkbox" checked="checked"> Open </label>
+                        <label><input type="checkbox" checked="checked"> High </label>
+                        <label><input type="checkbox" checked="checked"> Low </label>
+                        <label><input type="checkbox" checked="checked"> Close </label>
+                    </div>
+                    <button onclick="gettingStockValuesJson()" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading -->
     <div class="container">
-
+        <div class="col-lg-2 col-lg-offset-6">
+            <button id="Loading" class="btn btn-lg btn-warning"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> אל תדאג כפרה הם יגיעו</button>
+        </div>
     </div>
-
     <!-- Results -->
-    <div class="container" id="stocksContainer">
-        
+    <div class="container" id="resultsWrapper" >
+        <div class="col-lg-6" id="stocksContainer">
+        </div>
     </div>
+
+
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.js"></script>
