@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 
 
@@ -12,37 +12,51 @@ $(function () {
 });
 
 
-var gettingStockValuesJson = function()
-{
-    
+var gettingStockValuesJson = function () {
+
     var numberOfDays = document.getElementById("numberOfDays").value;
     var numberOfStocks = document.getElementById("numberOfStocks").value;
-    
+    var numberOfClusters = document.getElementById("numberOfClusters").value;
+    var checkboxes = {};
+    checkboxes.open = $("#openCheckBox")[0].checked;
+    checkboxes.close = $("#closeCheckBox")[0].checked;
+    checkboxes.high = $("#highCheckBox")[0].checked;
+    checkboxes.low = $("#lowCheckBox")[0].checked;
 
-   var data = {"numberOfDays":numberOfDays, "numberOfStocks" : numberOfStocks};
-    
 
-    $.ajax({
+
+
+    var UserOptions = {
+        StocksNumber : numberOfStocks,
+        DaysNumber : numberOfDays,
+        ClusterNumber: numberOfClusters,
+        Open: checkboxes.open,
+        Close: checkboxes.close,
+        High: checkboxes.high,
+        Low: checkboxes.low,
+    };
+
+
+    $.getJSON({
         dataType: "json",
         url: "http://localhost:63486/api/stock",
-        data: data,
-        error: function(data) {
+        data: UserOptions,
+        error: function (data) {
             console.log(data);
         },
         success: function (data) {
-            
+
             var stocks = data;
-           
+
             data.forEach(function (element, index, array) {
-                
-              
-                
+
+
                 var openArray = [];
                 var closeArray = [];
                 var highArray = [];
                 var lowArray = [];
 
-                element.Days.forEach(function(element, index, array){
+                element.Days.forEach(function (element, index, array) {
                     openArray[index] = element.Open.toFixed();
                     closeArray[index] = element.Close.toFixed();
                     highArray[index] = element.High.toFixed();
@@ -53,29 +67,28 @@ var gettingStockValuesJson = function()
                 element.closeArray = closeArray;
                 element.highArray = highArray;
                 element.lowArray = lowArray;
-             
 
-               // Making the panel element
-               $("#stocksContainer").append(MakePanel(MakeStock(element), index));
-                
-           
 
-               $('#'+ element.Name + '-open').sparkline(element.openArray);
-               $('#'+ element.Name + '-close').sparkline(element.closeArray);
-               $('#'+ element.Name + '-high').sparkline(element.highArray);
-               $('#'+ element.Name + '-low').sparkline(element.lowArray);
+                // Making the panel element
+                $("#stocksContainer").append(MakePanel(MakeStock(element), index));
+
+
+
+                $('#' + element.Name + '-open').sparkline(element.openArray);
+                $('#' + element.Name + '-close').sparkline(element.closeArray);
+                $('#' + element.Name + '-high').sparkline(element.highArray);
+                $('#' + element.Name + '-low').sparkline(element.lowArray);
 
             });
         }
     });
 
-  
+
 }
 
-var MakeStock = function(element)
-{
+var MakeStock = function (element) {
     return '<div>' +
-                '<h4>'+element.Name+'</h4>'+
+                '<h4>' + element.Name + '</h4>' +
                 '<span>open</span>' + '<span   id="' + element.Name + '-open' + '">' + '</span>' +
                 '<span>close</span>' + '<span  id="' + element.Name + '-close' + '">' + '</span>' +
                 '<span>high</span>' + '<span  id="' + element.Name + '-high' + '">' + '</span>' +
@@ -86,13 +99,13 @@ var MakeStock = function(element)
 
 }
 
-var MakePanel = function (panelContent,  index) {
-    return '<div class="panel panel-default id="'+ index + '>' +
+var MakePanel = function (panelContent, index) {
+    return '<div class="panel panel-default col-lg-6" id="' + index + '">' +
                 '<div class="panel-body">' +
                      panelContent +
                 '</div>' +
             '</div>';
 
-  
+
 
 }

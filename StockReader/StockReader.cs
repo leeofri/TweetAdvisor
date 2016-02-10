@@ -16,7 +16,18 @@ namespace StockReader
     {
         private static string CSV_PATH = @"C:\matan\Projects\StockAnalyzer\Resources\StockSymbols.txt";
      
-        public List<string> GetRandomStocksList(int numberOfStocks)
+        public List<Stock> MakeInputStocksFile(int numberOfStocks, int numberOfDays)
+        {
+            var stocksInfo = DownloadStocksInfo(numberOfStocks, numberOfDays);
+
+            string[] arrStringToWrite = { BuildingFinalString(stocksInfo) };
+
+            File.WriteAllLines(@"C:\matan\Projects\StockAnalyzer\StockReader\bin\Debug\input", arrStringToWrite);
+
+            return stocksInfo;
+        }
+
+        private List<string> GetRandomStocksList(int numberOfStocks)
         {
             var allLines = File.ReadAllLines(CSV_PATH);
             char[] delimiters = { '|' };
@@ -36,18 +47,7 @@ namespace StockReader
             return result;
         }
 
-        public List<Stock> MakeInputStocksFile(int numberOfStocks, int numberOfDays)
-        {
-            var stocksInfo = DownloadStocksInfo(numberOfStocks, numberOfDays);
-
-            string[] arrStringToWrite = { BuildingFinalString(stocksInfo) };
-
-            File.WriteAllLines(@"C:\matan\Projects\StockAnalyzer\StockReader\bin\Debug\input", arrStringToWrite);
-
-            return stocksInfo;
-        }
-
-        public List<Stock> DownloadStocksInfo(int numberOfStocks, int numberOfDays)
+        private List<Stock> DownloadStocksInfo(int numberOfStocks, int numberOfDays)
         {
             var randomStockNames = GetRandomStocksList(numberOfStocks);
 
@@ -165,7 +165,6 @@ namespace StockReader
             }
             return businessDays;
         }
-
 
         private static Stock NormalizeStock(Stock stock)
         {

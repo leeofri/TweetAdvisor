@@ -5,41 +5,20 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using StockReader;
+using StockAnalyzer.Site.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace StockAnalyzer.Site.Controllers
 {
     public class StockController : ApiController
     {
-        // GET api/values
-        public object Get(int numberOfDays, int numberOfStocks)
+        public object Get([FromUri] UserOptions UserOptions)
         {
             StockReader.StockManager asd = new StockReader.StockManager();
-            var stocks = asd.MakeInputStocksFile(numberOfStocks, numberOfDays);
+            var stocks = asd.MakeInputStocksFile(UserOptions.StocksNumber, UserOptions.DaysNumber);
 
             return stocks;
-
-
-        }
-
-        // GET api/values/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
         }
     }
 }

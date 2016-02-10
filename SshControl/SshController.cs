@@ -69,10 +69,12 @@ namespace SSHWrapper
             {
 
                 //create a new ssh stream
+
                 using (SshStream ssh = new SshStream(MACHINE_IP, USER_NAME, PASSWORD))
                 {
                     //writing to the ssh channel
                     ssh.Write(command);
+                    
          
                 }
             }
