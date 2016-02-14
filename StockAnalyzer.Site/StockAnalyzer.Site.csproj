@@ -234,7 +234,6 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StockController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -329,8 +328,12 @@
       <Project>{b583028d-a7e4-40a4-9c79-6a35d2d533c0}</Project>
       <Name>BO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ClouderaController\Hadoop.csproj">
+      <Project>{ceeb3e6b-0b8a-4bcf-9132-3d2d7086abc2}</Project>
+      <Name>Hadoop</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StockReader\StockReader.csproj">
-      <Project>{6ee3f9e7-8a86-4448-bddf-8990d94ea7d9}</Project>
+      <Project>{2519341c-8303-4963-8032-4eabbd6c1c10}</Project>
       <Name>StockReader</Name>
     </ProjectReference>
   </ItemGroup>

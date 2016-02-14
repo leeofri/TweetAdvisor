@@ -27,8 +27,8 @@ var gettingStockValuesJson = function () {
 
 
     var UserOptions = {
-        StocksNumber : numberOfStocks,
-        DaysNumber : numberOfDays,
+        StocksNumber: numberOfStocks,
+        DaysNumber: numberOfDays,
         ClusterNumber: numberOfClusters,
         Open: checkboxes.open,
         Close: checkboxes.close,
@@ -46,39 +46,42 @@ var gettingStockValuesJson = function () {
         },
         success: function (data) {
 
-            var stocks = data;
+            data.forEach(function (cluster, index, array) {
+               
+                $("#stocksContainer").append(MakePanel("Cluster : " + index, index));
 
-            data.forEach(function (element, index, array) {
+                cluster.Stocks.forEach(function (element, index, array) {
 
 
-                var openArray = [];
-                var closeArray = [];
-                var highArray = [];
-                var lowArray = [];
+                    var openArray = [];
+                    var closeArray = [];
+                    var highArray = [];
+                    var lowArray = [];
 
-                element.Days.forEach(function (element, index, array) {
-                    openArray[index] = element.Open.toFixed();
-                    closeArray[index] = element.Close.toFixed();
-                    highArray[index] = element.High.toFixed();
-                    lowArray[index] = element.Low.toFixed();
+                    element.Days.forEach(function (element, index, array) {
+                        openArray[index] = element.Open.toFixed();
+                        closeArray[index] = element.Close.toFixed();
+                        highArray[index] = element.High.toFixed();
+                        lowArray[index] = element.Low.toFixed();
+                    });
+
+                    element.openArray = openArray;
+                    element.closeArray = closeArray;
+                    element.highArray = highArray;
+                    element.lowArray = lowArray;
+
+
+                    // Making the panel element
+                    $("#stocksContainer").append(MakePanel(MakeStock(element), index));
+
+
+
+                    $('#' + element.Name + '-open').sparkline(element.openArray);
+                    $('#' + element.Name + '-close').sparkline(element.closeArray);
+                    $('#' + element.Name + '-high').sparkline(element.highArray);
+                    $('#' + element.Name + '-low').sparkline(element.lowArray);
+
                 });
-
-                element.openArray = openArray;
-                element.closeArray = closeArray;
-                element.highArray = highArray;
-                element.lowArray = lowArray;
-
-
-                // Making the panel element
-                $("#stocksContainer").append(MakePanel(MakeStock(element), index));
-
-
-
-                $('#' + element.Name + '-open').sparkline(element.openArray);
-                $('#' + element.Name + '-close').sparkline(element.closeArray);
-                $('#' + element.Name + '-high').sparkline(element.highArray);
-                $('#' + element.Name + '-low').sparkline(element.lowArray);
-
             });
         }
     });
@@ -100,12 +103,9 @@ var MakeStock = function (element) {
 }
 
 var MakePanel = function (panelContent, index) {
-    return '<div class="panel panel-default col-lg-6" id="' + index + '">' +
+    return '<div class="panel panel-default col-lg-12" id="' + index + '">' +
                 '<div class="panel-body">' +
                      panelContent +
                 '</div>' +
             '</div>';
-
-
-
 }

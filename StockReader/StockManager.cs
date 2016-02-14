@@ -8,21 +8,23 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using BO;
 
 namespace StockReader
 {
-   
+
     public class StockManager
     {
         private static string CSV_PATH = @"C:\matan\Projects\StockAnalyzer\Resources\StockSymbols.txt";
-     
+        private const string INPUT_FILE_PATH = @"C:\Users\Matan\Desktop\ExportFiles\input\input";
+
         public List<Stock> MakeInputStocksFile(int numberOfStocks, int numberOfDays)
         {
             var stocksInfo = DownloadStocksInfo(numberOfStocks, numberOfDays);
 
             string[] arrStringToWrite = { BuildingFinalString(stocksInfo) };
 
-            File.WriteAllLines(@"C:\matan\Projects\StockAnalyzer\StockReader\bin\Debug\input", arrStringToWrite);
+            File.WriteAllLines(INPUT_FILE_PATH, arrStringToWrite);
 
             return stocksInfo;
         }
