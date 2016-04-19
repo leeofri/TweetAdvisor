@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSHWrapper", "SshControl\SSHWrapper.csproj", "{857DD4E6-A706-45CF-9056-7DE48B4B978D}"
 EndProject
@@ -23,6 +23,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockAnalyzer.Site", "StockAnalyzer.Site\StockAnalyzer.Site.csproj", "{07822628-CCAD-4084-8476-1F2FBB111119}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BO", "BO\BO.csproj", "{B583028D-A7E4-40A4-9C79-6A35D2D533C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7AFF43F6-B3F7-4C93-8C15-24588BE61457}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,9 +66,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{857DD4E6-A706-45CF-9056-7DE48B4B978D} = {3531539F-DB2A-4192-A531-C89AE701BB3A}
-		{D27CF69D-4681-492A-BE4D-D3D209104423} = {778D7340-2743-46F3-ACAA-5196393EDA39}
 		{CEEB3E6B-0B8A-4BCF-9132-3D2D7086ABC2} = {3531539F-DB2A-4192-A531-C89AE701BB3A}
+		{857DD4E6-A706-45CF-9056-7DE48B4B978D} = {3531539F-DB2A-4192-A531-C89AE701BB3A}
 		{6EE3F9E7-8A86-4448-BDDF-8990D94EA7D9} = {3531539F-DB2A-4192-A531-C89AE701BB3A}
+		{D27CF69D-4681-492A-BE4D-D3D209104423} = {778D7340-2743-46F3-ACAA-5196393EDA39}
 	EndGlobalSection
 EndGlobal
