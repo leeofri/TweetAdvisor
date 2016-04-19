@@ -18,9 +18,9 @@ namespace StockReader
         private static string CSV_PATH = @"C:\matan\Projects\StockAnalyzer\Resources\StockSymbols.txt";
         private const string INPUT_FILE_PATH = @"C:\Users\Matan\Desktop\ExportFiles\input\input";
 
-        public List<Stock> MakeInputStocksFile(int numberOfStocks, int numberOfDays)
+        public List<File> MakeInputCandidateFile(int numberOfStocks, int numberOfDays)
         {
-            var stocksInfo = DownloadStocksInfo(numberOfStocks, numberOfDays);
+            var fileForAnalyze = DownloadStocksInfo(numberOfStocks, numberOfDays);
 
             string[] arrStringToWrite = { BuildingFinalString(stocksInfo) };
 
@@ -49,11 +49,11 @@ namespace StockReader
             return result;
         }
 
-        private List<Stock> DownloadStocksInfo(int numberOfStocks, int numberOfDays)
+        private List<Candidate> getRelevantFileByDateRange(DateTime start, DateTime end)
         {
             var randomStockNames = GetRandomStocksList(numberOfStocks);
 
-            List<Stock> stocks = new List<Stock>();
+            List<Candidate> stocks = new List<Candidate>();
 
 
             using (var client = new WebClient())
@@ -62,7 +62,7 @@ namespace StockReader
 
                 foreach (var currStockName in randomStockNames)
                 {
-                    Stock stock = new Stock();
+                    Candidate stock = new Candidate();
                     stock.Name = currStockName;
 
                     try
@@ -118,7 +118,7 @@ namespace StockReader
             return stocks;
         }
 
-        private static string BuildingFinalString(List<Stock> stocks)
+        private static string BuildingFinalString(List<Candidate> stocks)
         {
             StringBuilder resultString = new StringBuilder();
 
@@ -154,7 +154,7 @@ namespace StockReader
             return resultString.ToString();
         }
 
-        private static int CalcBusinessDays(List<Stock> stocks)
+        private static int CalcBusinessDays(List<Candidate> stocks)
         {
             int businessDays = 0;
 
@@ -168,9 +168,9 @@ namespace StockReader
             return businessDays;
         }
 
-        private static Stock NormalizeStock(Stock stock)
+        private static Candidate NormalizeStock(Candidate stock)
         {
-            Stock normelizedStock = new Stock { Name = stock.Name };
+            Candidate normelizedStock = new Candidate { Name = stock.Name };
 
             foreach (var day in stock.Days)
             {

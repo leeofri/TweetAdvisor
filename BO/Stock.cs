@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BO
 {
-    public class Stock
+    public class Candidate
     {
         public string Name { get; set; }
         public List<StockDayInfo> Days { get; set; }
 
-        public Stock()
+        public Candidate()
         {
             Days = new List<StockDayInfo>();
         }

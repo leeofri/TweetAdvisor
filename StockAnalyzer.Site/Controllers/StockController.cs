@@ -23,10 +23,9 @@ namespace StockAnalyzer.Site.Controllers
 
         public object Get([FromUri] UserOptions UserOptions)
         {
-            StockManager stockReader = new StockReader.StockManager();
-            var stocks = stockReader.MakeInputStocksFile(UserOptions.StocksNumber, UserOptions.DaysNumber);
+            var candidate = stockReader.MakeInputStocksFile(UserOptions.StocksNumber, UserOptions.DaysNumber);
 
-            var businessDays = stocks[0].Days.Count;
+            var businessDays = candidate[0].Days.Count;
 
             CreateUserConfigFile(UserOptions, businessDays);
 
@@ -36,7 +35,7 @@ namespace StockAnalyzer.Site.Controllers
             Dictionary<string, List<String>> importedFileContent = 
                 ReadingImportedFileAndCluserTheLines(IMPORT_FOLDER);
 
-            return Clustering(stocks, importedFileContent); 
+            return Clustering(candidate, importedFileContent); 
 
         }
 
@@ -78,7 +77,7 @@ namespace StockAnalyzer.Site.Controllers
             return final;
         }
 
-        private object Clustering(List<Stock> stocks, Dictionary<string, List<String>> importedFileContent)
+        private object Clustering(List<Candidate> stocks, Dictionary<string, List<String>> importedFileContent)
         {
 
             var clusteredStocks = new List<Cluster>();

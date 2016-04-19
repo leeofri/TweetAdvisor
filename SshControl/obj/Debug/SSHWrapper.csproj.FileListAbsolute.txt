@@ -18,3 +18,13 @@ C:\matan\Projects\StockAnalyzer\SshControl\bin\Debug\Tamir.SharpSSH.pdb
 C:\matan\Projects\StockAnalyzer\SshControl\obj\Debug\SSHWrapper.csprojResolveAssemblyReference.cache
 C:\matan\Projects\StockAnalyzer\SshControl\obj\Debug\SSHWrapper.dll
 C:\matan\Projects\StockAnalyzer\SshControl\obj\Debug\SSHWrapper.pdb
+D:\Programming\finalproject\SshControl\bin\Debug\SSHWrapper.dll.config
+D:\Programming\finalproject\SshControl\bin\Debug\SSHWrapper.dll
+D:\Programming\finalproject\SshControl\bin\Debug\SSHWrapper.pdb
+D:\Programming\finalproject\SshControl\bin\Debug\Tamir.SharpSSH.dll
+D:\Programming\finalproject\SshControl\bin\Debug\DiffieHellman.dll
+D:\Programming\finalproject\SshControl\bin\Debug\Org.Mentalis.Security.dll
+D:\Programming\finalproject\SshControl\bin\Debug\Tamir.SharpSSH.pdb
+D:\Programming\finalproject\SshControl\obj\Debug\SSHWrapper.csprojResolveAssemblyReference.cache
+D:\Programming\finalproject\SshControl\obj\Debug\SSHWrapper.dll
+D:\Programming\finalproject\SshControl\obj\Debug\SSHWrapper.pdb

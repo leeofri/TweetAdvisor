@@ -9,15 +9,15 @@ namespace BO
     public class Cluster
     {
         private string currClusterName;
-        private Stock currStock;
+        private Candidate currStock;
 
         public Cluster(string currClusterName)
         {
             this.currClusterName = currClusterName;
-            Stocks = new List<Stock>();
+            Stocks = new List<Candidate>();
         }
 
-        public List<Stock> Stocks { get; set; }
+        public List<Candidate> Stocks { get; set; }
         public string Name { get; set; }
     }
 }
